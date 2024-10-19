@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 public class ReunionPresencial extends Reunion {
     private String sala;
 
-    public ReunionPresencial(String tipo, LocalDateTime fecha, Empleado organizador, String sala) {
+    public ReunionPresencial(TipoReunion tipo, LocalDateTime fecha, Empleado organizador, String sala) {
         super(tipo, fecha, organizador);
         this.sala = sala;
     }

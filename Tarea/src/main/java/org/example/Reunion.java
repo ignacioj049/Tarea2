@@ -3,7 +3,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Reunion {
-    private String tipo;
+    private TipoReunion tipo;
     private LocalDateTime fecha;
     private LocalDateTime horaInicio;
     private LocalDateTime horaFin;
@@ -14,7 +14,7 @@ public class Reunion {
     private ArrayList<Empleado> ausentes;
     private ArrayList<Empleado> tarde;
 
-    public Reunion(String tipo, LocalDateTime fecha, Empleado organizador) {
+    public Reunion(TipoReunion tipo, LocalDateTime fecha, Empleado organizador) {
         this.tipo = tipo;
         this.fecha = fecha;
         this.organizador = organizador;
@@ -34,7 +34,7 @@ public class Reunion {
     }
 
     public void marcarAsistencia(Empleado empleado, boolean llegaTarde) {
-        if (invitados.contains(empleado)) {
+        if (invitados.contains(empleado) && !presentes.contains(empleado)) {
             presentes.add(empleado);
             if (llegaTarde) {
                 tarde.add(empleado);
@@ -43,7 +43,7 @@ public class Reunion {
     }
 
     public void marcarAusencia(Empleado empleado) {
-        if (invitados.contains(empleado)) {
+        if (invitados.contains(empleado) && !ausentes.contains(empleado)) {
             ausentes.add(empleado);
         }
     }
@@ -63,7 +63,14 @@ public class Reunion {
         return 0;
     }
 
-    public String getTipo() {
+    public double calcularPorcentajeAsistencia() {
+        if (invitados.isEmpty()) {
+            return 0.0;
+        }
+        return (double) presentes.size() / invitados.size() * 100;
+    }
+
+    public TipoReunion getTipo() {
         return tipo;
     }
 
@@ -89,3 +96,4 @@ public class Reunion {
                 " con fecha " + fecha.toString();
     }
 }
+

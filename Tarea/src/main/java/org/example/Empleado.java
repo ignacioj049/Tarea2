@@ -1,12 +1,12 @@
 package org.example;
 public class Empleado {
-    private String id;
+    private int id;
     private String nombre;
     private String apellidos;
     private String correo;
     private Departamento departamento;
 
-    public Empleado(String id, String nombre, String apellidos, String correo, Departamento departamento) {
+    public Empleado(int id, String nombre, String apellidos, String correo, Departamento departamento) {
         this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -14,9 +14,10 @@ public class Empleado {
         this.departamento = departamento;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
+
 
     public String getNombre() {
         return nombre;
@@ -39,3 +40,4 @@ public class Empleado {
         return nombre + " " + apellidos + " (" + correo + ")";
     }
 }
+

@@ -23,7 +23,7 @@ public class Departamento {
     }
 
     public ArrayList<Empleado> getEmpleados() {
-        return empleados;
+        return new ArrayList<>(empleados);
     }
 
     @Override
@@ -31,3 +31,4 @@ public class Departamento {
         return nombre + " (" + empleados.size() + " empleados)";
     }
 }
+

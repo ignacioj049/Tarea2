@@ -22,6 +22,8 @@ public class InformeReunion {
                 writer.write("Sala: " + ((ReunionPresencial) reunion).getSala());
             }
             writer.newLine();
+            writer.write("Porcentaje de asistentes: " + reunion.calcularPorcentajeAsistencia() + "%");
+            writer.newLine();
             writer.write("Notas:");
             for (String nota : reunion.getNotas()) {
                 writer.newLine();
@@ -30,3 +32,5 @@ public class InformeReunion {
         }
     }
 }
+
+
