@@ -1,0 +1,8 @@
+Fecha y hora de la reunión: 2024-10-15T11:55:16.904794400
+Hora de inicio: 2024-10-15T11:55:16.906808700
+Hora de fin: 2024-10-15T11:55:18.909523800
+Duración total: 0 minutos
+Tipo de reunión: Tecnica
+Sala: Sala 101
+Notas:
+- Revisión del proyecto.
