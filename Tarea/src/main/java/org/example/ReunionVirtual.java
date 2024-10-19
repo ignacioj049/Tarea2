@@ -13,6 +13,10 @@ public class ReunionVirtual extends Reunion {
         return enlace;
     }
 
+    public void setEnlace(String enlace) {
+        this.enlace = enlace;
+    }
+
     @Override
     public String toString() {
         return super.toString() + " (virtual) en enlace: " + enlace;

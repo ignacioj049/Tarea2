@@ -22,8 +22,28 @@ public class InformeReunion {
                 writer.write("Sala: " + ((ReunionPresencial) reunion).getSala());
             }
             writer.newLine();
+
+            writer.write("Participantes presentes: ");
+            for (Empleado presente : reunion.getPresentes()) {
+                writer.write(presente.getNombre() + " ");
+            }
+            writer.newLine();
+
+            writer.write("Participantes ausentes: ");
+            for (Empleado ausente : reunion.getAusentes()) {
+                writer.write(ausente.getNombre() + " ");
+            }
+            writer.newLine();
+
+            writer.write("Participantes que llegaron tarde: ");
+            for (Empleado tarde : reunion.getTarde()) {
+                writer.write(tarde.getNombre() + " ");
+            }
+            writer.newLine();
+
             writer.write("Porcentaje de asistentes: " + reunion.calcularPorcentajeAsistencia() + "%");
             writer.newLine();
+
             writer.write("Notas:");
             for (String nota : reunion.getNotas()) {
                 writer.newLine();

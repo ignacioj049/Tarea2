@@ -13,6 +13,10 @@ public class ReunionPresencial extends Reunion {
         return sala;
     }
 
+    public void setSala(String sala) {
+        this.sala = sala;
+    }
+
     @Override
     public String toString() {
         return super.toString() + " (presencial) en sala: " + sala;

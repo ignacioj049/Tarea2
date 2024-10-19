@@ -1,9 +1,12 @@
-Fecha y hora de la reunión: 2024-10-18T22:24:31.504240700
-Hora de inicio: 2024-10-18T22:24:31.504240700
-Hora de fin: 2024-10-18T22:24:33.510028400
+Fecha y hora de la reunión: 2024-10-18T23:17:11.418782400
+Hora de inicio: 2024-10-18T23:17:11.418782400
+Hora de fin: 2024-10-18T23:17:13.423058100
 Duración total: 0 minutos
 Tipo de reunión: TECNICA
 Sala: Sala 101
+Participantes presentes: 
+Participantes ausentes: 
+Participantes que llegaron tarde: 
 Porcentaje de asistentes: 0.0%
 Notas:
 - Revisión del proyecto.

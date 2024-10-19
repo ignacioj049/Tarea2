@@ -48,6 +48,10 @@ public class Reunion {
         }
     }
 
+    public void invitarDepartamento(Departamento dept) {
+        invitados.addAll(dept.getEmpleados());
+    }
+
     public void iniciarReunion() {
         this.horaInicio = LocalDateTime.now();
     }
@@ -86,9 +90,50 @@ public class Reunion {
         return horaFin;
     }
 
-    public ArrayList<String> getNotas() {
-        return notas;
+    public ArrayList<Empleado> getInvitados() {
+        return new ArrayList<>(invitados);
     }
+
+    public Empleado getOrganizador() {
+        return organizador;
+    }
+
+    public ArrayList<String> getNotas() {
+        return new ArrayList<>(notas);
+    }
+
+    public ArrayList<Empleado> getPresentes() {
+        return new ArrayList<>(presentes);
+    }
+
+    public ArrayList<Empleado> getAusentes() {
+        return new ArrayList<>(ausentes);
+    }
+
+    public ArrayList<Empleado> getTarde() {
+        return new ArrayList<>(tarde);
+    }
+
+    public void setTipo(TipoReunion tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setFecha(LocalDateTime fecha) {
+        this.fecha = fecha;
+    }
+
+    public void setHoraInicio(LocalDateTime horaInicio) {
+        this.horaInicio = horaInicio;
+    }
+
+    public void setHoraFin(LocalDateTime horaFin) {
+        this.horaFin = horaFin;
+    }
+
+    public void setOrganizador(Empleado organizador) {
+        this.organizador = organizador;
+    }
+
 
     @Override
     public String toString() {
