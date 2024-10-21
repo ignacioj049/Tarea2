@@ -53,7 +53,9 @@ public class Reunion {
      * @param invitado El empleado a invitar.
      */
     public void agregarInvitado(Empleado invitado) {
-        invitados.add(invitado);
+        if (!invitados.contains(invitado)) {
+            invitados.add(invitado);
+        }
     }
 
     /**
@@ -225,4 +227,3 @@ public class Reunion {
                 " con fecha " + fecha.toString();
     }
 }
-

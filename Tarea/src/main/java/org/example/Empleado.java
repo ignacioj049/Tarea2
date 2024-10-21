@@ -133,4 +133,3 @@ public class Empleado {
         return nombre + " " + apellidos + " (" + correo + ")";
     }
 }
-

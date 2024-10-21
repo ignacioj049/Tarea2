@@ -63,4 +63,3 @@ public class Departamento {
         return nombre + " (" + empleados.size() + " empleados)";
     }
 }
-
